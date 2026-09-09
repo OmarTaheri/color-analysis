@@ -9,7 +9,7 @@ RUN npm run build
 FROM nginx:stable-alpine AS runtime
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/out /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD wget -q -O /dev/null http://127.0.0.1:80/ || exit 1
+  CMD wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1
 CMD ["nginx", "-g", "daemon off;"]

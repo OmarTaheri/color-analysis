@@ -9,10 +9,10 @@ Production address: **https://film.omartaheri.com**
 1. Create an application from `https://github.com/OmarTaheri/color-analysis`, branch `main`.
 2. Choose the **Dockerfile** build pack.
 3. Set **Base Directory** to `/` and **Dockerfile Location** to `/Dockerfile`.
-4. Set **Ports Exposes** to `80`. No host port mapping is needed.
+4. Set **Ports Exposes** to `3000`. No host port mapping is needed.
 5. Set **Domains** to `https://film.omartaheri.com`.
 6. Point the domain's DNS A record to your Coolify server's public IPv4 address. Only add an AAAA record if that server supports IPv6.
-7. Deploy. Coolify handles HTTPS through its proxy. If application health checks are enabled, use HTTP, port `80`, path `/`.
+7. Deploy. Coolify handles HTTPS through its proxy. If application health checks are enabled, use HTTP, port `3000`, path `/`.
 
 No application secrets, database, persistent storage, or custom build/start commands are required. The Dockerfile builds the Next.js static export, then serves only the exported site with Nginx. Node.js and development dependencies are not included in the final container.
 
@@ -22,7 +22,7 @@ See the official [Coolify application settings](https://coolify.io/docs/applicat
 
 ```sh
 docker build -t color-analysis .
-docker run --rm -p 8080:80 color-analysis
+docker run --rm -p 8080:3000 color-analysis
 ```
 
 Open http://localhost:8080.
