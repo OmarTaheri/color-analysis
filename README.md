@@ -1,50 +1,28 @@
-# The Wolf of Wall Street — Colour Analysis
+# The Colour of Excess
 
-A student film study by Omar Taheri, with animated scene galleries, colour palettes, a character timeline, a YouTube video and browser PDF export.
+A Next.js static website analysing The Wolf of Wall Street (2013).
 
-Production address: **https://film.omartaheri.com**
+## Run
 
-## Deploy on Coolify
+- npm install
+- npm run dev
+- npm run build produces the deployable out directory.
 
-1. Create an application from `https://github.com/OmarTaheri/color-analysis`, branch `main`.
-2. Choose the **Dockerfile** build pack.
-3. Set **Base Directory** to `/` and **Dockerfile Location** to `/Dockerfile`.
-4. Set **Ports Exposes** to `3000`. No host port mapping is needed.
-5. Set **Domains** to `https://film.omartaheri.com`.
-6. Point the domain's DNS A record to your Coolify server's public IPv4 address. Only add an AAAA record if that server supports IPv6.
-7. Deploy. Coolify handles HTTPS through its proxy. If application health checks are enabled, use HTTP, port `3000`, path `/`.
+## Content
 
-No application secrets, database, persistent storage, or custom build/start commands are required. The Dockerfile builds the Next.js static export, then serves only the exported site with Nginx. Node.js and development dependencies are not included in the final container.
+- app/content.ts: fourteen scene readings and the character arc.
+- app/measurements.json: reproducible screenshot measurements and original file names.
+- app/page.tsx: interactions, placeholder video, QR target and export controls.
+- app/export-pdf.ts: exports snapshots of the rendered website sections.
+- app/globals.css: responsive layout, animation, and browser print fallback.
+- public/the-colour-of-excess.pdf: reviewed website snapshot.
 
-See the official [Coolify application settings](https://coolify.io/docs/applications/) and [domain setup](https://coolify.io/docs/knowledge-base/domains).
+The hero uses local animated stills with proportional cover cropping as explicitly labelled placeholders. The lower video embeds the supplied Jordan Belfort YouTube video after the viewer presses play. Replace MotionVideo with real video sources when clips are available. All scene images are distinct selections from the supplied screenshots; modal views naturally reuse the selected image.
 
-## Run with Docker
+## PDF regeneration
 
-```sh
-docker build -t color-analysis .
-docker run --rm -p 8080:3000 color-analysis
-```
+Use Export PDF in the header or footer. The export captures the current website width and selected hero image, embeds its fonts, and preserves the website layout on section-sized pages. Video is frozen to its poster; pop-up readings are excluded. The long gallery remains a continuous page to preserve its spacing. After content changes, review the generated PDF and copy it to public/the-colour-of-excess.pdf to refresh the archived download.
 
-Open http://localhost:8080.
+The QR currently targets the Sites URL in app/page.tsx. Public classroom access depends on that site's sharing settings.
 
-## Local development
-
-Requires Node.js 22.13 or newer.
-
-```sh
-npm ci
-npm run dev
-```
-
-`npm run build` creates the static site in `out/`. `next start` is not used because this project is a static export.
-
-## Project contents
-
-- `app/`: page, content, styling, animation and PDF export.
-- `components/ui/`: the dialog and button used by scene studies.
-- `public/`: only the 26 used film stills, video poster, three fonts, favicon, domain QR code and prepared PDF.
-- `Dockerfile` and `nginx.conf`: production container and static routing.
-
-The header and footer PDF buttons download the prepared file at `public/downloads/colour-study.pdf` immediately. The generator remains in `app/export-pdf.ts`. To refresh the PDF, temporarily set `GENERATE_PDF_ON_DEMAND=true` in `app/page.tsx`, run the website at a desktop viewport, and click Download PDF. Replace the prepared file with the new download, then restore the flag to `false` before committing. The footer QR code and canonical page address use `film.omartaheri.com`.
-
-Film stills and fonts retain their respective owners' rights; this repository does not grant a licence to those assets.
+The reference's typography, paper/brown/orange palette, opening tile expansion, sliding hero, thumbnail selectors, inline image reveals, asymmetric gallery and cursor interactions are implemented in React/GSAP. Film analysis and colour tools supply the assignment-specific content.
