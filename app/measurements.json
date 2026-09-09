@@ -1,0 +1,534 @@
+{
+  "18": {
+    "palette": [
+      {
+        "hex": "#1f201b",
+        "share": 27.7,
+        "hue": 72,
+        "sat": 16
+      },
+      {
+        "hex": "#060c12",
+        "share": 24.5,
+        "hue": 210,
+        "sat": 67
+      },
+      {
+        "hex": "#3a372b",
+        "share": 21.1,
+        "hue": 48,
+        "sat": 26
+      },
+      {
+        "hex": "#5a4f3f",
+        "share": 13.6,
+        "hue": 36,
+        "sat": 30
+      },
+      {
+        "hex": "#766c69",
+        "share": 13.2,
+        "hue": 14,
+        "sat": 11
+      }
+    ],
+    "saturation": 46,
+    "brightness": 19,
+    "contrast": 43,
+    "source": "vlcsnap-2026-09-07-19h32m31s683.png"
+  },
+  "24": {
+    "palette": [
+      {
+        "hex": "#1c110a",
+        "share": 27.6,
+        "hue": 23,
+        "sat": 64
+      },
+      {
+        "hex": "#030305",
+        "share": 25.5,
+        "hue": 240,
+        "sat": 40
+      },
+      {
+        "hex": "#2f241d",
+        "share": 20.8,
+        "hue": 23,
+        "sat": 38
+      },
+      {
+        "hex": "#4e403a",
+        "share": 14.5,
+        "hue": 18,
+        "sat": 26
+      },
+      {
+        "hex": "#736862",
+        "share": 11.6,
+        "hue": 21,
+        "sat": 15
+      }
+    ],
+    "saturation": 42,
+    "brightness": 15,
+    "contrast": 43,
+    "source": "vlcsnap-2026-09-07-19h33m03s069.png"
+  },
+  "31": {
+    "palette": [
+      {
+        "hex": "#020103",
+        "share": 29.8,
+        "hue": 270,
+        "sat": 67
+      },
+      {
+        "hex": "#40393a",
+        "share": 20.8,
+        "hue": 351,
+        "sat": 11
+      },
+      {
+        "hex": "#1d191a",
+        "share": 19.3,
+        "hue": 345,
+        "sat": 14
+      },
+      {
+        "hex": "#564e4e",
+        "share": 18.7,
+        "hue": 0,
+        "sat": 9
+      },
+      {
+        "hex": "#746965",
+        "share": 11.4,
+        "hue": 16,
+        "sat": 13
+      }
+    ],
+    "saturation": 24,
+    "brightness": 18,
+    "contrast": 43,
+    "source": "vlcsnap-2026-09-07-19h33m23s589.png"
+  },
+  "43": {
+    "palette": [
+      {
+        "hex": "#0b0b11",
+        "share": 26.9,
+        "hue": 240,
+        "sat": 35
+      },
+      {
+        "hex": "#666766",
+        "share": 25.4,
+        "hue": 120,
+        "sat": 1
+      },
+      {
+        "hex": "#453e3d",
+        "share": 18.5,
+        "hue": 7,
+        "sat": 12
+      },
+      {
+        "hex": "#777675",
+        "share": 17.4,
+        "hue": 30,
+        "sat": 2
+      },
+      {
+        "hex": "#8e8480",
+        "share": 11.8,
+        "hue": 17,
+        "sat": 10
+      }
+    ],
+    "saturation": 25,
+    "brightness": 30,
+    "contrast": 53,
+    "source": "vlcsnap-2026-09-07-19h36m44s818.png"
+  },
+  "83": {
+    "palette": [
+      {
+        "hex": "#060509",
+        "share": 24.1,
+        "hue": 255,
+        "sat": 44
+      },
+      {
+        "hex": "#282933",
+        "share": 23.6,
+        "hue": 235,
+        "sat": 22
+      },
+      {
+        "hex": "#49474e",
+        "share": 21.9,
+        "hue": 257,
+        "sat": 9
+      },
+      {
+        "hex": "#5c5457",
+        "share": 19.7,
+        "hue": 337,
+        "sat": 9
+      },
+      {
+        "hex": "#6b6365",
+        "share": 10.7,
+        "hue": 345,
+        "sat": 7
+      }
+    ],
+    "saturation": 28,
+    "brightness": 21,
+    "contrast": 40,
+    "source": "vlcsnap-2026-09-07-20h02m03s099.png"
+  },
+  "102": {
+    "palette": [
+      {
+        "hex": "#24170f",
+        "share": 26.9,
+        "hue": 23,
+        "sat": 58
+      },
+      {
+        "hex": "#050304",
+        "share": 26.3,
+        "hue": 330,
+        "sat": 40
+      },
+      {
+        "hex": "#52413c",
+        "share": 16.6,
+        "hue": 14,
+        "sat": 27
+      },
+      {
+        "hex": "#7e6c66",
+        "share": 15.5,
+        "hue": 15,
+        "sat": 19
+      },
+      {
+        "hex": "#8c7873",
+        "share": 14.7,
+        "hue": 12,
+        "sat": 18
+      }
+    ],
+    "saturation": 36,
+    "brightness": 21,
+    "contrast": 49,
+    "source": "vlcsnap-2026-09-07-20h08m18s995.png"
+  },
+  "114": {
+    "palette": [
+      {
+        "hex": "#544340",
+        "share": 28.8,
+        "hue": 9,
+        "sat": 24
+      },
+      {
+        "hex": "#291f1f",
+        "share": 21.1,
+        "hue": 0,
+        "sat": 24
+      },
+      {
+        "hex": "#60615f",
+        "share": 20.7,
+        "hue": 90,
+        "sat": 2
+      },
+      {
+        "hex": "#7b7370",
+        "share": 17.7,
+        "hue": 16,
+        "sat": 9
+      },
+      {
+        "hex": "#77615a",
+        "share": 11.6,
+        "hue": 14,
+        "sat": 24
+      }
+    ],
+    "saturation": 24,
+    "brightness": 31,
+    "contrast": 39,
+    "source": "vlcsnap-2026-09-07-20h11m07s831.png"
+  },
+  "119": {
+    "palette": [
+      {
+        "hex": "#4c3d35",
+        "share": 27,
+        "hue": 21,
+        "sat": 30
+      },
+      {
+        "hex": "#2f2421",
+        "share": 22.3,
+        "hue": 13,
+        "sat": 30
+      },
+      {
+        "hex": "#6a5a4e",
+        "share": 22,
+        "hue": 26,
+        "sat": 26
+      },
+      {
+        "hex": "#94847e",
+        "share": 15.2,
+        "hue": 16,
+        "sat": 15
+      },
+      {
+        "hex": "#847267",
+        "share": 13.4,
+        "hue": 23,
+        "sat": 22
+      }
+    ],
+    "saturation": 35,
+    "brightness": 32,
+    "contrast": 43,
+    "source": "vlcsnap-2026-09-07-20h15m02s100.png"
+  },
+  "127": {
+    "palette": [
+      {
+        "hex": "#020001",
+        "share": 30.4,
+        "hue": 330,
+        "sat": 100
+      },
+      {
+        "hex": "#161210",
+        "share": 21.1,
+        "hue": 20,
+        "sat": 27
+      },
+      {
+        "hex": "#090405",
+        "share": 20.8,
+        "hue": 348,
+        "sat": 56
+      },
+      {
+        "hex": "#241e1c",
+        "share": 17.5,
+        "hue": 15,
+        "sat": 22
+      },
+      {
+        "hex": "#3d2d29",
+        "share": 10.2,
+        "hue": 12,
+        "sat": 33
+      }
+    ],
+    "saturation": 53,
+    "brightness": 6,
+    "contrast": 20,
+    "source": "vlcsnap-2026-09-07-20h19m25s551.png"
+  },
+  "135": {
+    "palette": [
+      {
+        "hex": "#412824",
+        "share": 27.9,
+        "hue": 8,
+        "sat": 45
+      },
+      {
+        "hex": "#191212",
+        "share": 22.7,
+        "hue": 0,
+        "sat": 28
+      },
+      {
+        "hex": "#574a45",
+        "share": 21.2,
+        "hue": 17,
+        "sat": 21
+      },
+      {
+        "hex": "#626c66",
+        "share": 16.7,
+        "hue": 144,
+        "sat": 9
+      },
+      {
+        "hex": "#8b766d",
+        "share": 11.6,
+        "hue": 18,
+        "sat": 22
+      }
+    ],
+    "saturation": 33,
+    "brightness": 25,
+    "contrast": 48,
+    "source": "vlcsnap-2026-09-07-20h24m17s976.png"
+  },
+  "147": {
+    "palette": [
+      {
+        "hex": "#4f3934",
+        "share": 27.8,
+        "hue": 11,
+        "sat": 34
+      },
+      {
+        "hex": "#6a534a",
+        "share": 24.1,
+        "hue": 17,
+        "sat": 30
+      },
+      {
+        "hex": "#291414",
+        "share": 20.8,
+        "hue": 0,
+        "sat": 51
+      },
+      {
+        "hex": "#7f695d",
+        "share": 17,
+        "hue": 21,
+        "sat": 27
+      },
+      {
+        "hex": "#8e7a72",
+        "share": 10.3,
+        "hue": 17,
+        "sat": 20
+      }
+    ],
+    "saturation": 37,
+    "brightness": 29,
+    "contrast": 48,
+    "source": "vlcsnap-2026-09-07-20h28m44s801.png"
+  },
+  "152": {
+    "palette": [
+      {
+        "hex": "#3c3334",
+        "share": 24.6,
+        "hue": 353,
+        "sat": 15
+      },
+      {
+        "hex": "#120e10",
+        "share": 23.4,
+        "hue": 330,
+        "sat": 22
+      },
+      {
+        "hex": "#5f504d",
+        "share": 22.5,
+        "hue": 10,
+        "sat": 19
+      },
+      {
+        "hex": "#706160",
+        "share": 18.9,
+        "hue": 4,
+        "sat": 14
+      },
+      {
+        "hex": "#846f68",
+        "share": 10.6,
+        "hue": 15,
+        "sat": 21
+      }
+    ],
+    "saturation": 31,
+    "brightness": 26,
+    "contrast": 46,
+    "source": "vlcsnap-2026-09-07-20h30m51s734.png"
+  },
+  "158": {
+    "palette": [
+      {
+        "hex": "#2d2119",
+        "share": 26.2,
+        "hue": 24,
+        "sat": 44
+      },
+      {
+        "hex": "#040001",
+        "share": 25.1,
+        "hue": 345,
+        "sat": 100
+      },
+      {
+        "hex": "#695549",
+        "share": 21.1,
+        "hue": 22,
+        "sat": 30
+      },
+      {
+        "hex": "#17120d",
+        "share": 16.3,
+        "hue": 30,
+        "sat": 43
+      },
+      {
+        "hex": "#0b0806",
+        "share": 11.2,
+        "hue": 24,
+        "sat": 45
+      }
+    ],
+    "saturation": 53,
+    "brightness": 14,
+    "contrast": 42,
+    "source": "vlcsnap-2026-09-07-20h33m48s277.png"
+  },
+  "187": {
+    "palette": [
+      {
+        "hex": "#6d625d",
+        "share": 23.1,
+        "hue": 19,
+        "sat": 15
+      },
+      {
+        "hex": "#2a2727",
+        "share": 21.1,
+        "hue": 0,
+        "sat": 7
+      },
+      {
+        "hex": "#020204",
+        "share": 20.9,
+        "hue": 240,
+        "sat": 50
+      },
+      {
+        "hex": "#131112",
+        "share": 20,
+        "hue": 330,
+        "sat": 11
+      },
+      {
+        "hex": "#0a090b",
+        "share": 14.8,
+        "hue": 270,
+        "sat": 18
+      }
+    ],
+    "saturation": 29,
+    "brightness": 15,
+    "contrast": 48,
+    "source": "vlcsnap-2026-09-07-20h38m46s082.png"
+  }
+}

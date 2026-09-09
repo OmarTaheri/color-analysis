@@ -1,0 +1,53 @@
+'use client';
+import {toCanvas,getFontEmbedCSS} from 'html-to-image';
+import {jsPDF} from 'jspdf';
+
+/** Capture the rendered website, rather than maintaining a second PDF design. */
+export async function exportWebsitePDF(source:HTMLElement){
+ await document.fonts.ready;
+ const width=Math.round(source.getBoundingClientRect().width);
+ const clone=source.cloneNode(true) as HTMLElement;
+ clone.classList.add('pdf-export-surface');
+ clone.removeAttribute('data-opening');
+ clone.setAttribute('aria-hidden','true');
+ clone.inert=true;
+ Object.assign(clone.style,{position:'absolute',left:'-100000px',top:'0',width:`${width}px`,pointerEvents:'none'});
+ clone.querySelectorAll('.opening,.cursor,.skip-link,.notice,.menu-panel,[data-slot="dialog-content"],[data-slot="dialog-overlay"]').forEach(n=>n.remove());
+ clone.querySelectorAll<HTMLElement>('*').forEach(el=>{
+  el.style.animation='none';el.style.transition='none';
+  if(el.classList.contains('reveal')||el.classList.contains('intro-line')||el.classList.contains('hero-word')){el.style.opacity='1';el.style.transform='none'}
+  if(el.classList.contains('intro-media')){el.style.removeProperty('width');el.style.transform='none'}
+  if(el.classList.contains('scene-image')||el.parentElement?.classList.contains('scene-image')||el.classList.contains('hero-frame'))el.style.transform='none';
+ });
+ const sourceSlides=Array.from(source.querySelectorAll<HTMLElement>('.hero-slide'));
+ const visible=sourceSlides.reduce((best,el,i)=>Number(getComputedStyle(el).opacity)>Number(getComputedStyle(sourceSlides[best]).opacity)?i:best,0);
+ clone.querySelectorAll<HTMLElement>('.hero-slide').forEach((el,i)=>{if(i!==visible)el.remove();else{el.style.opacity='1';el.style.transform='none';el.querySelector<HTMLElement>('.hero-slide-inner')!.style.transform='none'}});
+ clone.querySelectorAll('video').forEach(video=>{const image=document.createElement('img');image.src=video.poster;image.alt=video.getAttribute('aria-label')||'Film frame';image.className=video.className;image.style.cssText='width:100%;height:100%;object-fit:cover;display:block';video.replaceWith(image)});
+ clone.querySelectorAll('canvas,iframe').forEach(n=>n.remove());
+ clone.querySelectorAll('.hero-tabs button').forEach(n=>{(n as HTMLElement).style.transform='none'});
+ clone.querySelectorAll('.hero-copy p').forEach(n=>{(n as HTMLElement).style.opacity='1'});
+ clone.querySelectorAll('button[disabled]').forEach(n=>n.removeAttribute('disabled'));
+ clone.querySelectorAll('button.export').forEach(n=>{n.textContent='EXPORT PDF ↓';n.removeAttribute('disabled')});
+ clone.querySelectorAll('details').forEach(n=>n.open=true);
+ const selected=source.querySelector<HTMLSelectElement>('#frame-select');const selectClone=clone.querySelector<HTMLSelectElement>('#frame-select');if(selected&&selectClone)selectClone.value=selected.value;
+ document.body.appendChild(clone);
+ try{
+  await Promise.all(Array.from(clone.querySelectorAll('img')).map(im=>{im.loading='eager';return im.decode().catch(()=>{throw new Error('An image could not be loaded for PDF export')})}));
+  const fontEmbedCSS=await getFontEmbedCSS(clone);
+  const sections=Array.from(clone.querySelectorAll<HTMLElement>('.pdf-section'));
+  let pdf:jsPDF|undefined;
+  for(const section of sections){
+   const bounds=section.getBoundingClientRect();const w=Math.ceil(bounds.width),h=Math.ceil(bounds.height);
+   if(!w||!h)continue;
+   const canvas=await toCanvas(section,{width:w,height:h,pixelRatio:Math.min(1.5,14000/h),fontEmbedCSS,backgroundColor:getComputedStyle(section).backgroundColor==='rgba(0, 0, 0, 0)'?'#efeeec':getComputedStyle(section).backgroundColor,skipAutoScale:false});
+   const pageW=297,pageH=297*h/w;const orientation=pageW>pageH?'landscape':'portrait';
+   if(!pdf)pdf=new jsPDF({orientation,unit:'mm',format:[pageW,pageH],compress:true});else pdf.addPage([pageW,pageH],orientation);
+   pdf.addImage(canvas.toDataURL('image/jpeg',.94),'JPEG',0,0,pageW,pageH,undefined,'FAST');
+   canvas.width=1;canvas.height=1;
+  }
+  if(!pdf)throw new Error('No website sections to export');
+  pdf.setProperties({title:'The Wolf of Wall Street — Omar Taheri',subject:'The Wolf of Wall Street: colour analysis',creator:'The Colour of Excess / website export'});
+  pdf.save('The Wolf of Wall Street — Omar Taheri.pdf');
+  return URL.createObjectURL(pdf.output('blob'));
+ }finally{clone.remove()}
+}
