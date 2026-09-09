@@ -1,10 +1,10 @@
 'use client';
-import {useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import {scenes} from './content';
 import raw from './measurements.json';
 import {hueFromPoint,paletteHues,recolourPixels} from './color-adjustments';
 
-export default function SceneStudy({scene}:{scene:typeof scenes[number]}){
+export default function SceneStudy({scene,palette}:{scene:typeof scenes[number];palette:ReactNode}){
  const m=(raw as Record<string,typeof raw['18']>)[scene.image];
  const hues=useMemo(()=>paletteHues(scene.image===147?[...m.palette,{hue:342,sat:42,share:12}]:m.palette),[m,scene.image]);
  const [targets,setTargets]=useState(hues);
@@ -24,7 +24,7 @@ export default function SceneStudy({scene}:{scene:typeof scenes[number]}){
  useEffect(()=>{if(!ready||!source.current)return;const id=requestAnimationFrame(()=>{const base=source.current!,ctx=canvas.current?.getContext('2d');if(ctx)ctx.putImageData(new ImageData(recolourPixels(base.data,hues,targets),base.width,base.height),0,0)});return()=>cancelAnimationFrame(id)},[hues,targets,ready]);
  const move=(index:number,x:number,y:number)=>{const r=wheel.current?.getBoundingClientRect();if(r)update(index,hueFromPoint(x,y,r.left+r.width/2,r.top+r.height/2))};
  return <div className="scene-study">
-  <div className="scene-preview"><img ref={image} className="dialog-image" src={'/stills/'+scene.image+'.webp'} alt={scene.location} onLoad={prepare} style={{display:changed&&!compare&&ready?'none':'block'}}/><canvas ref={canvas} role="img" aria-label={scene.location+' with your colour changes'} style={{display:changed&&!compare&&ready?'block':'none'}}/></div>
+  <div className="scene-preview"><img ref={image} className="dialog-image" src={'/stills/'+scene.image+'.webp'} alt={scene.location} onLoad={prepare} style={{display:changed&&!compare&&ready?'none':'block'}}/><canvas ref={canvas} role="img" aria-label={scene.location+' with your colour changes'} style={{display:changed&&!compare&&ready?'block':'none'}}/><div className="popup-palette"><h4>Main colours in the original picture</h4>{palette}</div></div>
   <div className="adjustment-heading"><h3>Try changing the colours</h3><button type="button" onClick={()=>{setTargets([...hues]);setCompare(false)}}>Reset</button></div>
   <p className="adjustment-help">Drag a dot around the wheel to change that colour in the picture.</p>
   <div className="adjustment-controls">
