@@ -27,9 +27,25 @@ export async function exportWebsitePDF(source:HTMLElement){
  clone.querySelectorAll('.hero-tabs button').forEach(n=>{(n as HTMLElement).style.transform='none'});
  clone.querySelectorAll('.hero-copy p').forEach(n=>{(n as HTMLElement).style.opacity='1'});
  clone.querySelectorAll('button[disabled]').forEach(n=>n.removeAttribute('disabled'));
- clone.querySelectorAll('button.export').forEach(n=>{n.textContent='EXPORT PDF ↓';n.removeAttribute('disabled')});
+ clone.querySelectorAll('button.export,.footer .square-button,.menu-toggle,.image-open').forEach(n=>n.remove());
  clone.querySelectorAll('details').forEach(n=>n.open=true);
- const selected=source.querySelector<HTMLSelectElement>('#frame-select');const selectClone=clone.querySelector<HTMLSelectElement>('#frame-select');if(selected&&selectClone)selectClone.value=selected.value;
+ const intro=document.createElement('section');
+ intro.className='pdf-intro pdf-section';
+ intro.innerHTML='<div><h2>Explore the interactive website.</h2><p>Move the colours, open the scenes and watch the video online. Click the link or scan the QR code for the full experience.</p><a href="https://film.omartaheri.com">https://film.omartaheri.com</a></div><a class="pdf-qr-link" href="https://film.omartaheri.com"><img src="/qr.svg" alt="Scan to open the website" width="160" height="160"/></a>';
+ clone.querySelector('main')!.prepend(intro);
+ clone.querySelector('.youtube-video')?.setAttribute('data-pdf-link','https://www.youtube.com/watch?v=GBRUa4TZqHk');
+ const videoLabel=clone.querySelector('.youtube-play b');if(videoLabel)videoLabel.textContent='Open video on YouTube';
+ const gallery=clone.querySelector<HTMLElement>('.scenes');
+ if(gallery){
+  const cards=Array.from(gallery.querySelectorAll<HTMLElement>('.scene-card'));
+  for(let i=0;i<cards.length;i+=2){
+   const sheet=gallery.cloneNode(false) as HTMLElement;sheet.removeAttribute('id');sheet.classList.add('pdf-scene-page');
+   const heading=gallery.querySelector('.section-heading')!.cloneNode(true);sheet.appendChild(heading);
+   const grid=document.createElement('div');grid.className='scene-grid';cards.slice(i,i+2).forEach(card=>grid.appendChild(card));sheet.appendChild(grid);
+   gallery.before(sheet);
+  }
+  gallery.remove();
+ }
  document.body.appendChild(clone);
  try{
   await Promise.all(Array.from(clone.querySelectorAll('img')).map(im=>{im.loading='eager';return im.decode().catch(()=>{throw new Error('An image could not be loaded for PDF export')})}));
@@ -43,6 +59,13 @@ export async function exportWebsitePDF(source:HTMLElement){
    const pageW=297,pageH=297*h/w;const orientation=pageW>pageH?'landscape':'portrait';
    if(!pdf)pdf=new jsPDF({orientation,unit:'mm',format:[pageW,pageH],compress:true});else pdf.addPage([pageW,pageH],orientation);
    pdf.addImage(canvas.toDataURL('image/jpeg',.94),'JPEG',0,0,pageW,pageH,undefined,'FAST');
+   // Raster artwork needs explicit PDF link annotations for clickable areas.
+   section.querySelectorAll<HTMLElement>('a[href],[data-pdf-link]').forEach(el=>{
+    const url=el.getAttribute('data-pdf-link')||el.getAttribute('href');
+    if(!url||!/^https?:\/\//.test(url))return;
+    const r=el.getBoundingClientRect();if(!r.width||!r.height)return;
+    pdf!.link((r.left-bounds.left)*pageW/w,(r.top-bounds.top)*pageH/h,r.width*pageW/w,r.height*pageH/h,{url});
+   });
    canvas.width=1;canvas.height=1;
   }
   if(!pdf)throw new Error('No website sections to export');

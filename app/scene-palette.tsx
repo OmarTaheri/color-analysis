@@ -1,0 +1,1 @@
+export default function ScenePalette({hexes}:{hexes:string[]}){return <div className="palette" aria-label="Main picture colours" style={{gridTemplateColumns:'repeat('+hexes.length+', minmax(0, 1fr))'}}>{hexes.map((hex,i)=><div key={i}><div className="swatch" style={{background:hex}}/><span>{hex.toUpperCase()}</span></div>)}</div>}
