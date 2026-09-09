@@ -130,7 +130,7 @@ html{scrollbar-color:#75645b #efeeec;scrollbar-width:thin}
 @media(prefers-reduced-motion:reduce){.adjustment-wheel,.adjustment-wheel *,.colour-reset,.colour-reset *{animation:none!important;transition:none!important}}
 
 /* Full hue spectrum, fading to white as saturation approaches the centre. */
-.adjustment-wheel{background:radial-gradient(circle closest-side,#fff 0%,#ffffff00 92%),conic-gradient(#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000);box-shadow:none}
+.adjustment-wheel{background:radial-gradient(circle closest-side,#fff 0%,#ffffff00 92%),conic-gradient(hsl(0 68% 54%),hsl(60 68% 54%),hsl(120 68% 54%),hsl(180 68% 54%),hsl(240 68% 54%),hsl(300 68% 54%),hsl(360 68% 54%));box-shadow:none}
 .adjustment-wheel-hole{background:transparent}.adjustment-wheel-dot{width:20px;height:20px;border:3px solid #fff;box-shadow:0 0 0 2px #281e1e}.adjustment-wheel-dot span{display:none}
 .adjustment-wheel:hover{box-shadow:0 0 0 3px #75645b10}.adjustment-heading .colour-reset{background:#efeeec;color:#281e1e;border:1px solid #281e1e;box-shadow:none;padding:10px 14px}.adjustment-heading .colour-reset:hover{background:#e0dbd4;box-shadow:none;transform:none}
 .pdf-export-surface .scene-summary{font-size:clamp(18px,1.8vw,28px);line-height:1.5}.pdf-export-surface .scene-card h3{font-size:clamp(30px,2.8vw,48px)}.pdf-export-surface .scene-location{font-size:clamp(12px,1.1vw,18px)}.pdf-export-surface .scene-meta,.pdf-export-surface .mood{font-size:clamp(11px,1vw,16px)}
@@ -139,4 +139,4 @@ html{scrollbar-color:#75645b #efeeec;scrollbar-width:thin}
 
 .adjustment-wheel .adjustment-wheel-hole{inset:44%;background:#fff;opacity:1;transform:none;box-shadow:0 0 0 1px rgba(40,30,30,.12)}
 
-.pdf-export-surface .site-header{justify-content:center}.pdf-export-surface .site-header .header-actions{display:none}.pdf-export-surface .site-header .wordmark{text-align:center;max-width:none}
+.pdf-export-surface .site-header{justify-content:center}.pdf-export-surface .site-header .header-actions{display:none}.pdf-export-surface .site-header .wordmark{text-align:center;max-width:none;font-size:clamp(32px,3.1vw,48px)}

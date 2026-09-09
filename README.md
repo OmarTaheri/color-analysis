@@ -42,9 +42,9 @@ npm run dev
 
 - `app/`: page, content, styling, animation and PDF export.
 - `components/ui/`: the dialog and button used by scene studies.
-- `public/`: only the 26 used film stills, video poster, three fonts, favicon and domain QR code.
+- `public/`: only the 26 used film stills, video poster, three fonts, favicon, domain QR code and prepared PDF.
 - `Dockerfile` and `nginx.conf`: production container and static routing.
 
-The header and footer PDF buttons generate a PDF from the current page. No old PDF snapshot is bundled. The footer QR code and canonical page address use `film.omartaheri.com`.
+The header and footer PDF buttons download the prepared file at `public/downloads/colour-study.pdf` immediately. The generator remains in `app/export-pdf.ts`. To refresh the PDF, temporarily set `GENERATE_PDF_ON_DEMAND=true` in `app/page.tsx`, run the website at a desktop viewport, and click Download PDF. Replace the prepared file with the new download, then restore the flag to `false` before committing. The footer QR code and canonical page address use `film.omartaheri.com`.
 
 Film stills and fonts retain their respective owners' rights; this repository does not grant a licence to those assets.
