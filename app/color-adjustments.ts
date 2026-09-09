@@ -27,9 +27,20 @@ export function recolourPixels(source:Uint8ClampedArray,from:ColourPoint[],to:Co
  const result=new Uint8ClampedArray(source);
  if(from.every((p,i)=>p.hue===to[i].hue&&p.saturation===to[i].saturation))return result;
  const shifts=from.map((p,i)=>({hue:((to[i].hue-p.hue+540)%360)-180,saturation:to[i].saturation-p.saturation}));
- const table=Array.from({length:360},(_,h)=>{let hue=0,saturation=0,weight=0;from.forEach((p,i)=>{const w=Math.exp(-Math.pow(hueDistance(h,p.hue)/30,2)/2);hue+=w*shifts[i].hue;saturation+=w*shifts[i].saturation;weight+=w});return {hue:hue/Math.max(1,weight),saturation:saturation/Math.max(1,weight)}});
- for(let i=0;i<source.length;i+=4){const p=rgbToHsv(source[i],source[i+1],source[i+2]),shift=table[Math.round(p.hue)%360];
-  const influence=Math.min(1,p.saturation/.1),sat=Math.max(0,Math.min(1,p.saturation+shift.saturation*influence));
+ // Match each original colour in hue, saturation and brightness. Exact palette
+ // colours stay anchored, even when two selected colours have similar hues.
+ const anchors=from.map(p=>({x:p.saturation*Math.cos(p.hue*Math.PI/180),y:p.saturation*Math.sin(p.hue*Math.PI/180),value:p.value}));
+ for(let i=0;i<source.length;i+=4){const p=rgbToHsv(source[i],source[i+1],source[i+2]);
+  const xColour=p.saturation*Math.cos(p.hue*Math.PI/180),yColour=p.saturation*Math.sin(p.hue*Math.PI/180);
+  let total=0,hue=0,strength=0,nearest=Infinity;
+  for(let j=0;j<anchors.length;j++){
+   const a=anchors[j],distance=(xColour-a.x)**2+(yColour-a.y)**2+(a.value===undefined?0:(p.value-a.value)**2);
+   const weight=1/(distance+1e-10)**2;nearest=Math.min(nearest,distance);
+   total+=weight;hue+=weight*shifts[j].hue;strength+=weight*shifts[j].saturation;
+  }
+  const influence=Math.min(1,.09/Math.max(nearest,1e-10));
+  const shift={hue:hue/total*influence,saturation:strength/total*influence};
+  const sat=Math.max(0,Math.min(1,p.saturation+shift.saturation));
   const h=(p.hue+shift.hue+360)%360,delta=p.value*sat,min=p.value-delta,sector=h/60,x=delta*(1-Math.abs(sector%2-1));
   const rgb=sector<1?[delta,x,0]:sector<2?[x,delta,0]:sector<3?[0,delta,x]:sector<4?[0,x,delta]:sector<5?[x,0,delta]:[delta,0,x];
   for(let c=0;c<3;c++)result[i+c]=Math.round((rgb[c]+min)*255);

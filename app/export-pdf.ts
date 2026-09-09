@@ -31,21 +31,10 @@ export async function exportWebsitePDF(source:HTMLElement){
  clone.querySelectorAll('details').forEach(n=>n.open=true);
  const intro=document.createElement('section');
  intro.className='pdf-intro pdf-section';
- intro.innerHTML='<div><h2>Explore the interactive website.</h2><p>Move the colours, open the scenes and watch the video online. Click the link or scan the QR code for the full experience.</p><a href="https://film.omartaheri.com">https://film.omartaheri.com</a></div><a class="pdf-qr-link" href="https://film.omartaheri.com"><img src="/qr.svg" alt="Scan to open the website" width="160" height="160"/></a>';
+ intro.innerHTML='<div><h2>Explore the interactive website.</h2><p>Open each scene to learn more about the colours used. Click the link or scan the QR code to try the interactive website.</p><a href="https://film.omartaheri.com">https://film.omartaheri.com</a></div><a class="pdf-qr-link" href="https://film.omartaheri.com"><img src="/qr.svg" alt="Scan to open the website" width="160" height="160"/></a>';
  clone.querySelector('main')!.prepend(intro);
  clone.querySelector('.youtube-video')?.setAttribute('data-pdf-link','https://www.youtube.com/watch?v=GBRUa4TZqHk');
  const videoLabel=clone.querySelector('.youtube-play b');if(videoLabel)videoLabel.textContent='Open video on YouTube';
- const gallery=clone.querySelector<HTMLElement>('.scenes');
- if(gallery){
-  const cards=Array.from(gallery.querySelectorAll<HTMLElement>('.scene-card'));
-  for(let i=0;i<cards.length;i+=2){
-   const sheet=gallery.cloneNode(false) as HTMLElement;sheet.removeAttribute('id');sheet.classList.add('pdf-scene-page');
-   const heading=gallery.querySelector('.section-heading')!.cloneNode(true);sheet.appendChild(heading);
-   const grid=document.createElement('div');grid.className='scene-grid';cards.slice(i,i+2).forEach(card=>grid.appendChild(card));sheet.appendChild(grid);
-   gallery.before(sheet);
-  }
-  gallery.remove();
- }
  document.body.appendChild(clone);
  try{
   await Promise.all(Array.from(clone.querySelectorAll('img')).map(im=>{im.loading='eager';return im.decode().catch(()=>{throw new Error('An image could not be loaded for PDF export')})}));
