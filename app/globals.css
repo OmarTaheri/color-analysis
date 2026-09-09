@@ -145,3 +145,7 @@ html{scrollbar-color:#75645b #efeeec;scrollbar-width:thin}
 .adjustment-heading .colour-reset{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(4px);transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s,background .2s ease}
 .adjustment-heading .colour-reset[data-visible=true]{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition-delay:0s}
 .adjustment-heading .colour-reset:active{transform:scale(.96)}
+
+/* Cover the top of the mobile pop-up while the image stays in place. */
+@media(max-width:767px){.scene-preview{top:-35px;padding-top:14px;margin-top:-14px;background:#efeeec}}
+@media(max-width:479px){.scene-preview{top:-22px}}
