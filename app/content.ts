@@ -1,23 +1,202 @@
 export const scenes = [
-{image:43,stage:'01 / ASPIRATION',title:'Learning the language of power.',location:'Lunch with Mark Hanna',scheme:'Cool–warm contrast',hues:[210,32],mood:'Seduction · belonging',summary:'Blue-grey skyline and tailored suits frame Wall Street as a world of composure. Warm skin and the restaurant setting make Hanna’s cynical lesson feel sociable: exploitation arrives as friendly career advice.',detail:'Jordan is still an apprentice. The restrained corporate palette gives the setting credibility, while daylight and comfortable dining soften the moral ugliness of Hanna’s advice. The warm–cool separation keeps the people distinct from the city without making this a mathematically pure complementary scheme.',evidence:'Look at the blue-grey windows behind the men, then the warmer faces and table. Costume, daylight and production design all contribute; the still alone cannot isolate the colour grade.',counter:'Cool blue does not automatically mean sadness here. Its relationship to suits, finance and mentorship makes it read as professionalism.'},
-{"image": 83, "title": "Building a stage for himself.", "location": "Jordan addresses the growing office", "scheme": "Steel-blue and grey neutrals", "hues": [210, 35], "mood": "Authority · ambition", "summary": "Blue-grey tailoring and glass blocks make Jordan look controlled and professional. His open arms and central position turn an ordinary office into a stage for leadership.", "detail": "Jordan’s rise depends on being seen as someone worth following. The restrained palette borrows the appearance of institutional discipline while his gesture supplies the energy. Colour supports his authority without needing to become vivid.", "evidence": "Compare the dark suit with the repeating translucent blocks and pale shirts at the edges. His silhouette is clearer than any single saturated colour.", "counter": "Professional-looking colours do not establish professional ethics. That mismatch is central to the scene.", "stage": "02 / ASCENT"},
-{"image": 102, "title": "Success becomes a family business.", "location": "Jordan and his father in the office", "scheme": "Warm browns and muted whites", "hues": [30, 45], "mood": "Familiarity · tension", "summary": "Wood, beige blinds and warm skin make the room feel established and familiar. The pale shirt and red tie draw attention to Jordan’s father, interrupting the room’s darker suits.", "detail": "The setting presents a business with furniture, hierarchy and family oversight. Its comfortable brown palette suggests stability, even as the exchanges expose the disorder behind that appearance. Jordan’s growing operation is becoming an institution in looks before it is one in conduct.", "evidence": "Follow the red tie against the pale shirt, then compare the standing figures with the darker seated group and brown furniture.", "counter": "Warmth can support familiarity while the dialogue creates conflict. The palette alone does not make this a peaceful scene.", "stage": "03 / EXPANSION"},
-{"image": 31, "title": "One salesman becomes a crowd.", "location": "The crowded trading floor", "scheme": "Cool office light and repeated neutrals", "hues": [205, 35], "mood": "Momentum · collective excitement", "summary": "Pale shirts and dark jackets repeat across a dense room. Cool overhead light unifies the crowd, turning individual sellers into a visual pattern around Jordan’s enterprise.", "detail": "This early montage image anticipates the established brokerage. Placed here in story order, it shows the scale reached after Jordan builds his team. The organisation’s energy comes from repetition and movement more than from highly saturated colour.", "evidence": "Look at the grid of ceiling panels and the repeated light shirts. Small warm faces punctuate an otherwise neutral workplace.", "counter": "This frame appears early in the film’s presentation of excess. Its position here represents the stage of Jordan’s life, not its screen time.", "stage": "04 / MOMENTUM"},
-{"image": 24, "title": "Money becomes the message.", "location": "Jordan with cash at his desk", "scheme": "Warm amber and dark navy", "hues": [35, 215], "mood": "Possession · persuasion", "summary": "Amber wood and warm light surround Jordan’s dark suit. The banknote in his hands becomes a pale focal object, making money both a physical possession and the subject of his performance.", "detail": "The formal office supplies credibility while the cash makes the promise tangible. Warm browns suggest expensive materials; dark tailoring holds his figure together against them. He is no longer merely learning how power looks: he is performing it for the viewer.", "evidence": "Compare the banknote and face with the shadowed suit, then the amber backdrop. Lightness and placement make the note salient despite its small size.", "counter": "The banknote’s association with wealth comes from what it is, not from green acting as a universal psychological signal.", "stage": "05 / WEALTH"},
-{"image": 114, "title": "The party becomes a worldview.", "location": "The poolside celebration", "scheme": "Aqua water against warm skin", "hues": [185, 30], "mood": "Exhilaration · excess", "summary": "The pool’s aqua colour cuts through a crowd of warm skin and pale clothes. The elevated viewpoint makes leisure look abundant: success is presented as a spectacle that fills the frame.", "detail": "Colour helps transform wealth from an abstract number into something bodily and attractive. The cool pool and warm crowd separate clearly, while bright daylight makes the gathering feel open and pleasurable. The pleasure of the image is part of the film’s seduction.", "evidence": "Compare the pool with the surrounding bodies and pale building. The warm–cool relationship is visible across large areas rather than in a single prop.", "counter": "The inviting palette does not endorse the behaviour. Framing, narration and what the viewer knows can make the same spectacle satirical.", "stage": "06 / EXCESS"},
-{image:119,stage:'07 / DESIRE',title:'The fantasy gets a colour.',location:'Naomi at the party',scheme:'Cyan against warm surroundings',hues:[180,30],mood:'Attraction · aspiration',summary:'Naomi’s vivid cyan dress separates her from the softer, warmer party surroundings. The accent makes her immediately legible as the focus of Jordan’s attention and part of his fantasy of success.',detail:'The dress works through local contrast: a relatively saturated cool colour occupies a meaningful area near her face, while the background is less distinct. Jordan’s narrated world turns people as well as possessions into signs of achievement. This is a reading of his viewpoint, not a statement that the character is only an object.',evidence:'Compare the dress with the surrounding warm skin and subdued interior. A five-colour whole-frame palette may underrepresent this narratively important accent.',counter:'The contrast is approximate, not a textbook cyan–red complementary pair. Its salience also depends on placement, focus and costume.'},
-{"image": 127, "title": "The fantasy moves into shadow.", "location": "Jordan and Naomi in the car", "scheme": "Near-black enclosure and warm skin", "hues": [25, 35], "mood": "Secrecy · desire", "summary": "The car’s dark interior encloses warmer faces and skin. The dramatic reduction in visible background turns public luxury into a private, compressed encounter.", "detail": "In the courtship phase, Jordan treats intimacy as another part of the life he wants to acquire. Here the luxury vehicle is less a bright trophy than a shadowed enclosure. Local brightness directs attention to the people while most surrounding detail recedes.", "evidence": "Look at the visible faces and skin against the near-black seats and bodywork. The strong tonal difference matters more than a precise hue harmony.", "counter": "Darkness can conceal and concentrate attention without proving a character’s internal feelings. The secrecy reading also depends on the scene’s context.", "stage": "08 / COURTSHIP"},
-{image:135,stage:'09 / LUXURY',title:'Wealth looks like a holiday.',location:'The seaside wedding',scheme:'Warm pastels and cool sea',hues:[32,195],mood:'Pleasure · wish fulfilment',summary:'Pale clothing, warm skin and the blue-green sea create an inviting image of leisure. The brightness makes wealth feel effortless, encouraging the audience to enjoy the spectacle before questioning what paid for it.',detail:'The wedding packages Jordan’s transformation as a desirable lifestyle. White and pastel clothing provide a clean surface, while the coastal setting opens the frame after the crowded offices. The appealing image can create dramatic irony because the viewer already knows that the fortune comes from manipulation.',evidence:'Notice the pale garments against the sea and the softness of the warm colours. Bright surfaces are visible evidence; innocence is only one possible association.',counter:'White is not proof of moral purity. Here its attractive appearance can help conceal corruption.'},
-{"image": 18, "title": "Status becomes a costume.", "location": "Jordan beside the chauffeured car", "scheme": "Deep navy against garden greens", "hues": [215, 110], "mood": "Confidence · self-display", "summary": "Navy suits, a red tie and manicured greenery make wealth appear orderly. The car and attendant turn Jordan’s composed appearance into a small performance of status.", "detail": "This montage image belongs to the established luxury phase of his life. Formal dress separates Jordan from the natural greens and links expensive possessions to professional authority. His casual gesture makes the privilege appear normal to him.", "evidence": "Compare the pinstripes and red tie with the softer garden background. The car and the second suited figure complete the display of service and ownership.", "counter": "The scene is positioned by character development, not by where its montage appears in the film. Green here is visibly landscaping before it is any symbolic association.", "stage": "10 / STATUS"},
-{"image": 147, "title": "Luxury cannot settle the argument.", "location": "Jordan and Naomi in the nursery", "scheme": "Creams and pinks with a magenta accent", "hues": [335, 35], "mood": "Domestic tension · imbalance", "summary": "Cream furnishings and soft pink surroundings promise comfort, but Naomi’s stronger magenta clothing interrupts that softness. The attractive room contains a visibly unequal confrontation.", "detail": "Domestic luxury extends the earlier fantasy of a perfect life. Its pale palette remains intact while the relationship becomes a contest for power. Jordan’s low position and Naomi’s stronger colour accent make the contrast between appearances and behaviour especially clear.", "evidence": "Compare the cream cot and upholstery with Naomi’s clothing, then Jordan’s pale shirt and posture. Read the colour hierarchy together with the arrangement of bodies.", "counter": "Pastels do not automatically mean innocence. Their apparent gentleness can sharpen the tension created by the action.", "stage": "11 / FRACTURE"},
-{image:152,stage:'12 / IMPUNITY',title:'A white suit of armour.',location:'The FBI visit on the yacht',scheme:'High-value whites / navy contrast',hues:[215,35],mood:'Confidence · confrontation',summary:'The yacht’s bright surfaces and Jordan’s pale clothing display comfort and entitlement. Against that setting, darker formal clothes bring the investigation into the luxury image itself.',detail:'Jordan treats privilege as protection. The pale yacht environment keeps the confrontation inside his carefully staged world, where hospitality and spectacle seem capable of buying cooperation. Colour does not suddenly turn ominous; tension comes from the mismatch between the attractive setting and the threat to his control.',evidence:'Compare pale clothing and sunlit yacht surfaces with darker suits. The light–dark relationship is more prominent than a strong hue harmony.',counter:'A bright frame can carry danger. Narrative context reverses the apparent ease of the palette.'},
-{image:158,stage:'13 / COLLAPSE',title:'The luxury object breaks.',location:'The damaged white Lamborghini',scheme:'Warm darks / pale focal object',hues:[38,60],mood:'Humiliation · disorientation',summary:'The white car remains conspicuous, but its damage changes the meaning of luxury. Warm, dark surroundings no longer promise comfort; they enclose the evidence of Jordan’s lost control.',detail:'The object that once signalled mastery becomes a record of bodily and moral failure. The pale bodywork catches attention against the darker night setting, so the viewer can read the damage. Colour continuity makes the reversal stronger: whiteness is still attractive, but the narrative has stripped away its promise.',evidence:'Read the bright bodywork against the shadowed ground and the visible damage. The contrast locates evidence rather than simply making the scene stylish.',counter:'The turn is not just “warm becomes cool.” A familiar colour can retain its hue while acquiring a different meaning.'},
-{"image": 187, "title": "Privilege meets a barrier.", "location": "Jordan behind the transport partition", "scheme": "Muted blue-grey and beige", "hues": [210, 35], "mood": "Restriction · vulnerability", "summary": "Cool blue-grey surfaces and a plain beige shirt strip away the earlier display. The dark mesh behind Jordan replaces the open spaces and polished surfaces of his luxury world.", "detail": "At the consequence stage, the image restricts Jordan physically and visually. His face sits against a mechanical grid rather than a crowd responding to him. Muted colour and institutional materials reduce the visual signs with which he previously performed control.", "evidence": "Compare the plain shirt and cool interior with the black mesh. The barrier and close framing provide stronger evidence of restriction than hue alone.", "counter": "The ending does not erase his ability to sell. This image marks a loss of freedom and status at one point in the story, not a claim of complete moral transformation.", "stage": "14 / CONSEQUENCE"}
+  {
+    "image": 43,
+    "stage": "01 / STARTING OUT",
+    "title": "Jordan learns from Mark Hanna.",
+    "location": "Lunch with Mark Hanna",
+    "scheme": "Blue-grey suits and warm skin",
+    "mood": "Hopeful · interested",
+    "summary": "Jordan wants to fit into Wall Street. The blue-grey suits make the men look professional, while the warm colours of their faces make the lunch feel friendly.",
+    "detail": "Mark Hanna gives Jordan advice about making money from clients. The serious suits and comfortable restaurant help his advice sound normal, even though it is selfish.",
+    "evidence": "Look at the blue-grey background beside the warmer faces and table. The difference helps the two men stand out.",
+    "counter": "Blue feels professional here because of the suits and business setting. It does not mean that Hanna is honest."
+  },
+  {
+    "image": 83,
+    "stage": "02 / BECOMING A LEADER",
+    "title": "Jordan becomes the boss.",
+    "location": "Jordan addresses the growing office",
+    "scheme": "Dark blue suits and grey glass",
+    "mood": "Confident · ambitious",
+    "summary": "Jordan stands in front of the office with his arms open. His dark suit stands out against the pale glass and shirts, making him look like the person in charge.",
+    "detail": "Jordan needs his workers to believe in him. His business clothes make him look serious, while his position in the room draws everyone’s attention.",
+    "evidence": "Compare Jordan’s dark suit with the pale background. Notice how the people around him face towards him.",
+    "counter": "The office looks professional, but Jordan is still misleading clients. Looking successful is different from being trustworthy."
+  },
+  {
+    "image": 102,
+    "stage": "03 / FAMILY AT WORK",
+    "title": "Jordan works with his father.",
+    "location": "Jordan and his father in the office",
+    "scheme": "Brown furniture, pale shirts and a red tie",
+    "mood": "Familiar · tense",
+    "summary": "The brown furniture and warm light make the office look comfortable. Jordan’s father stands out because of his pale shirt and red tie.",
+    "detail": "Having his father in the business makes Jordan’s office feel connected to family. But the arguments show that a comfortable room does not mean everything is going well.",
+    "evidence": "Look at his father’s red tie against the pale shirt. Then compare him with the darker suits and brown furniture.",
+    "counter": "The warm colours suggest a familiar place. What the characters say and do still makes the scene tense."
+  },
+  {
+    "image": 31,
+    "stage": "04 / A GROWING TEAM",
+    "title": "Jordan’s team gets bigger.",
+    "location": "The crowded trading floor",
+    "scheme": "Pale shirts, dark suits and cool light",
+    "mood": "Busy · excited",
+    "summary": "The office is full of workers in similar shirts and suits. The repeated colours make them look like one big team following Jordan.",
+    "detail": "Jordan’s business now reaches far beyond one salesman. The crowd and matching clothes show how many people have joined his way of making money.",
+    "evidence": "Notice the rows of pale shirts under the ceiling lights. The dark jackets break up the lighter parts of the room.",
+    "counter": "The film shows this busy office early on. Here it helps us understand how large Jordan’s business becomes."
+  },
+  {
+    "image": 24,
+    "stage": "05 / MAKING MONEY",
+    "title": "Jordan shows off his money.",
+    "location": "Jordan with cash at his desk",
+    "scheme": "Warm brown walls and a dark blue suit",
+    "mood": "Proud · greedy",
+    "summary": "Jordan holds up money in his office. The warm brown background looks expensive, and the lighter banknote catches our attention against his dark suit.",
+    "detail": "Money is now central to Jordan’s idea of success. His office and clothes make him look important while he shows the viewer what he cares about.",
+    "evidence": "Look at the banknote and Jordan’s face against his darker clothes. They are easier to notice because they are lighter.",
+    "counter": "The note represents wealth because it is money. Its meaning does not come from its colour alone."
+  },
+  {
+    "image": 114,
+    "stage": "06 / PARTYING",
+    "title": "Jordan spends his money on parties.",
+    "location": "The poolside celebration",
+    "scheme": "Blue-green water and warm skin",
+    "mood": "Excited · carefree",
+    "summary": "The bright pool and warm skin colours make the party look fun. The large crowd shows how much money Jordan can spend on entertainment.",
+    "detail": "Jordan’s success becomes a life full of parties. The sunny colours help us understand why this lifestyle attracts him and the people around him.",
+    "evidence": "Compare the blue-green pool with the people around it. The cool water stands out against their warmer skin.",
+    "counter": "The party looks enjoyable, but we know Jordan’s money comes from cheating people. That makes the scene more complicated than a happy celebration."
+  },
+  {
+    "image": 119,
+    "stage": "07 / MEETING NAOMI",
+    "title": "Jordan notices Naomi.",
+    "location": "Naomi at the party",
+    "scheme": "Bright blue-green clothing and warm surroundings",
+    "mood": "Interested · attracted",
+    "summary": "Naomi’s bright blue-green dress stands out at the party. It draws our attention to her, just as Jordan starts paying attention to her.",
+    "detail": "Jordan sees Naomi as part of the life he wants. Her strong dress colour separates her from the softer background and makes her easy to notice.",
+    "evidence": "Look at the dress beside Naomi’s skin and the warmer room. Its stronger colour helps it stand out.",
+    "counter": "The dress helps guide our attention, but Jordan’s reaction tells us why Naomi matters in this scene."
+  },
+  {
+    "image": 127,
+    "stage": "08 / GETTING CLOSER",
+    "title": "Jordan and Naomi are alone.",
+    "location": "Jordan and Naomi in the car",
+    "scheme": "Dark car seats and warmer skin",
+    "mood": "Private · tense",
+    "summary": "Most of the car is very dark. The light on Jordan and Naomi’s skin makes us focus on them instead of the space around them.",
+    "detail": "After the busy party, this small dark space feels private. Their faces and bodies become the main part of the picture because the background is difficult to see.",
+    "evidence": "Compare the visible skin with the nearly black seats. The difference between light and dark guides our eyes.",
+    "counter": "Darkness makes the scene feel private, but their actions explain their relationship. The colour alone cannot tell us what they feel."
+  },
+  {
+    "image": 135,
+    "stage": "09 / THE WEDDING",
+    "title": "Jordan and Naomi get married.",
+    "location": "The seaside wedding",
+    "scheme": "Pale clothes and a blue-green sea",
+    "mood": "Happy · relaxed",
+    "summary": "The pale clothes, sunny light and blue-green sea make the wedding look happy and expensive. Jordan seems to have the life he wanted.",
+    "detail": "The open seaside setting feels relaxed compared with Jordan’s crowded office. The light colours make the wedding attractive, even though we know where his money comes from.",
+    "evidence": "Look at the pale wedding clothes against the sea. The warm skin colours keep our attention on the people.",
+    "counter": "White clothes can look fresh and elegant. They do not make Jordan innocent or change the way he earned his money."
+  },
+  {
+    "image": 18,
+    "stage": "10 / SHOWING OFF",
+    "title": "Jordan shows his expensive lifestyle.",
+    "location": "Jordan beside the chauffeured car",
+    "scheme": "Dark blue suits and green gardens",
+    "mood": "Proud · confident",
+    "summary": "Jordan’s dark suit looks neat against the green garden. The car and driver show that he can pay other people to look after him.",
+    "detail": "Jordan uses clothes and expensive things to show his success. His suit links him to the business world, even when he is outside the office.",
+    "evidence": "Notice the dark blue suit and red tie beside the green plants. The car and driver also help show his wealth.",
+    "counter": "The garden looks carefully kept because he has money to maintain it. Green does not represent money just because it appears in this scene."
+  },
+  {
+    "image": 147,
+    "stage": "11 / PROBLEMS AT HOME",
+    "title": "Jordan and Naomi argue at home.",
+    "location": "Jordan and Naomi in the nursery",
+    "scheme": "Cream furniture, soft pink and dark pink clothing",
+    "mood": "Unhappy · tense",
+    "summary": "The nursery’s cream furniture and pink colours make it look like a gentle family space. But Jordan and Naomi are arguing, so the room feels very different from what we expect.",
+    "detail": "Naomi’s darker pink clothing stands out against the pale room. Jordan is lower down on the floor, and their positions help show the struggle between them.",
+    "evidence": "Compare Naomi’s pink clothing with the cream cot and Jordan’s pale shirt. Notice where each person is placed.",
+    "counter": "Soft pink may make us think of a caring home. Their argument shows that expensive furniture and gentle colours cannot fix their relationship."
+  },
+  {
+    "image": 152,
+    "stage": "12 / THE FBI VISIT",
+    "title": "The FBI visits Jordan’s yacht.",
+    "location": "The FBI visit on the yacht",
+    "scheme": "Bright white surfaces and dark blue clothes",
+    "mood": "Confident · tense",
+    "summary": "The white yacht and Jordan’s pale clothes make his life look comfortable. The FBI agents’ darker clothes stand out inside this expensive setting.",
+    "detail": "Jordan acts as if his money can help him control the meeting. The bright setting still looks relaxing, but the agents are there to investigate him.",
+    "evidence": "Compare the white yacht and pale clothes with the agents’ darker suits. The difference makes the two sides easy to see.",
+    "counter": "The scene is bright, but it is not safe or carefree for Jordan. The reason for the visit creates the tension."
+  },
+  {
+    "image": 158,
+    "stage": "13 / LOSING CONTROL",
+    "title": "Jordan damages his Lamborghini.",
+    "location": "The damaged white Lamborghini",
+    "scheme": "A white car and a dark background",
+    "mood": "Confused · out of control",
+    "summary": "The white Lamborghini stands out against the dark surroundings. Its damage shows that Jordan is losing control of himself and his expensive lifestyle.",
+    "detail": "Earlier, an expensive car helps Jordan show off. Here the same kind of possession becomes evidence of his reckless behaviour.",
+    "evidence": "Look at the bright car body against the darker ground. The light colour helps us notice the damage.",
+    "counter": "The car is still white, but it no longer suggests the same success. What happened to it changes how we read the image."
+  },
+  {
+    "image": 187,
+    "stage": "14 / THE CONSEQUENCES",
+    "title": "Jordan faces the consequences.",
+    "location": "Jordan behind the transport partition",
+    "scheme": "Faded blue-grey and beige",
+    "mood": "Trapped · worried",
+    "summary": "The plain colours and dark barrier make Jordan’s surroundings feel restricted. He no longer looks like the confident man on a yacht or in front of his workers.",
+    "detail": "The plain shirt and small enclosed space take away the signs of wealth we saw before. The barrier behind him makes his loss of freedom more visible.",
+    "evidence": "Compare the beige shirt with the blue-grey interior and dark mesh. The space looks much less comfortable than his earlier rooms.",
+    "counter": "The dull colours support the feeling of restriction. The barrier and Jordan’s situation explain why the scene feels different."
+  }
 ];
-export const chapters=[
-{title:'Wanting to fit in',range:'Beginning',color:'#90a8ac',text:'When Jordan Belfort has lunch with Mark Hanna, the blue-grey suits and city background make Wall Street look serious and professional. These colours suggest success because they belong to the business world Jordan wants to join. The warmer faces make Hanna’s advice feel friendly, even when he is teaching Jordan to take advantage of clients.'},
-{title:'Looking like a leader',range:'Rise',color:'#bca47d',text:'As Jordan builds Stratton Oakmont with Donnie Azoff, dark suits and pale shirts appear across the office. Their similar colours make the workers look like one organised team. This helps Jordan look like a trustworthy boss, even though he and Donnie are making money by misleading people.'},
-{title:'Showing off success',range:'Peak',color:'#dac785',text:'Naomi’s bright cyan dress stands out against the warmer colours at the party, drawing our attention to her just as Jordan notices her. Later, pale wedding clothes and the blue-green sea make his rich lifestyle look like a perfect holiday. These colours make his success feel attractive because we connect them with sunshine, comfort and expensive trips.'},
-{title:'Losing control',range:'Fall',color:'#556f70',text:'The soft pink and cream nursery looks like a caring family space, but Jordan and Naomi argue inside it. The colours make their unhappy relationship stand out against the comfortable home. Jordan’s white Lamborghini also changes meaning: it first shows his wealth, but after he damages it, the same bright white draws attention to the damage and his loss of control.'},
-{title:'People still listen',range:'Ending',color:'#8a8176',text:'At the final sales seminar, Jordan faces an audience in ordinary clothes and a plain room. The muted colours make this setting feel closer to everyday life than his earlier parties and yacht. Our attention shifts to the people watching him. Even after his crimes, they still want to learn his way of becoming successful.'}
+export const chapters = [
+  {
+    "title": "Wanting to fit in",
+    "range": "Beginning",
+    "color": "#90a8ac",
+    "text": "When Jordan Belfort has lunch with Mark Hanna, the blue-grey suits and city background make Wall Street look serious and professional. These colours suggest success because they belong to the business world Jordan wants to join. The warmer faces make Hanna’s advice feel friendly, even when he is teaching Jordan to take advantage of clients."
+  },
+  {
+    "title": "Looking like a leader",
+    "range": "Rise",
+    "color": "#bca47d",
+    "text": "As Jordan builds Stratton Oakmont with Donnie Azoff, dark suits and pale shirts appear across the office. Their similar colours make the workers look like one organised team. This helps Jordan look like a trustworthy boss, even though he and Donnie are making money by misleading people."
+  },
+  {
+    "title": "Showing off success",
+    "range": "Peak",
+    "color": "#dac785",
+    "text": "Naomi’s bright cyan dress stands out against the warmer colours at the party, drawing our attention to her just as Jordan notices her. Later, pale wedding clothes and the blue-green sea make his rich lifestyle look like a perfect holiday. These colours make his success feel attractive because we connect them with sunshine, comfort and expensive trips."
+  },
+  {
+    "title": "Losing control",
+    "range": "Fall",
+    "color": "#556f70",
+    "text": "The soft pink and cream nursery looks like a caring family space, but Jordan and Naomi argue inside it. The colours make their unhappy relationship stand out against the comfortable home. Jordan’s white Lamborghini also changes meaning: it first shows his wealth, but after he damages it, the same bright white draws attention to the damage and his loss of control."
+  },
+  {
+    "title": "People still listen",
+    "range": "Ending",
+    "color": "#8a8176",
+    "text": "At the final sales seminar, Jordan faces an audience in ordinary clothes and a plain room. The muted colours make this setting feel closer to everyday life than his earlier parties and yacht. Our attention shifts to the people watching him. Even after his crimes, they still want to learn his way of becoming successful."
+  }
 ];
