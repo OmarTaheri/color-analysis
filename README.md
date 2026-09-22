@@ -1,6 +1,6 @@
-![The Colour of Excess — interactive film colour study](public/readme-hero.png)
+![Color Analysis for The Wolf of Wall Street](public/readme-hero.webp)
 
-# The Colour of Excess
+# Color Analysis for The Wolf of Wall Street
 
 This project began with an assignment in my Film Appreciation class: analyse how colour is used in a film. I am a Computer Science student, so I wanted to approach the assignment through something I genuinely enjoy—designing and building an interactive experience—and create a result I could feel proud of.
 
