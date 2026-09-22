@@ -1,6 +1,10 @@
+![The Colour of Excess — interactive film colour study](public/readme-hero.png)
+
 # The Colour of Excess
 
-A Next.js static website analysing The Wolf of Wall Street (2013).
+This project began with an assignment in my Film Appreciation class: analyse how colour is used in a film. I am a Computer Science student, so I wanted to approach the assignment through something I genuinely enjoy—designing and building an interactive experience—and create a result I could feel proud of.
+
+The result is a visual essay about *The Wolf of Wall Street* (2013). It follows Jordan Belfort's story scene by scene, looking at how colour supports ambition, persuasion, excess, and the gradual loss of control. Alongside the written analysis, I built interactive scene studies, colour palettes, motion, and a downloadable PDF so the assignment could live as more than a traditional report.
 
 ## Run
 
