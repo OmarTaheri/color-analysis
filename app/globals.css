@@ -164,7 +164,7 @@ html{scrollbar-color:#75645b #efeeec;scrollbar-width:thin}
 
  /* Preserve the authored phrase/image pairings instead of flex-wrapping them apart. */
  .intro{padding-left:18px;padding-right:18px}
- .intro-title{display:block;width:min(100%,650px);font-size:clamp(50px,13vw,68px);line-height:.84}
+ .intro-title{display:block;width:min(100%,650px);font-size:clamp(56px,14.5vw,82px);line-height:.84}
  .intro-line{display:block;min-height:0;line-height:inherit;margin:0 0 .12em}
  .intro-media{display:inline-flex;width:1.35em;height:.72em;margin:0 .08em;vertical-align:.06em;border-radius:5px}
  .intro-media img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
